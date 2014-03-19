@@ -1,0 +1,2 @@
+{% capture more %}... <a href="{{ post.slug }}" class="more">Read more</a>{% endcapture %}
+<p>{{ post.body | strip_html | truncatewords:50,more }}</p></li>

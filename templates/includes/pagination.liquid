@@ -1,0 +1,19 @@
+{% if collection.previous %}
+	<a href="/{{ global.blog-loc }}{{ collection.current_page | minus:1 }}" class="page-link">Previous</a>
+{% else %}
+	<a class="page-link disabled">Previous</a>
+{% endif %}
+
+<em class="pagination">Showing posts {{ collection.current_offset | plus: 1 }} -
+	{% if collection.next %}
+		{{ collection.current_offset | plus: collection.page_size }} 
+	{% else %}
+		{{ collection.size }}
+	{% endif %}
+of {{ collection.size }}</em>
+
+{% if collection.next %}
+	<a href="/{{ global.blog-loc }}{{ collection.current_page | plus:1 }}" class="page-link">Next</a>
+{% else %}
+	<a class="page-link disabled">Next</a>
+{% endif %}

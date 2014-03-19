@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <title>{% block title %}Empty{% endblock %}</title>
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+
+        {{ "normalize.css" | asset_url | stylesheet_tag }}
+        {{ "layout.css" | asset_url | stylesheet_tag }}
+        {{ "media-queries.css" | asset_url | stylesheet_tag }}
+
+        {% block styles %}{% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include "header" %}
+
+            <article>
+                <h1>{{ model.title }}</h1>
+                <em class="blog-date">{{ model.date | date: "%A, %B %d, %Y" }}</em>
+
+                {% block content %}{% endblock %}
+            </article>
+        </div>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

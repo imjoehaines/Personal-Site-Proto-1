@@ -1,0 +1,53 @@
+{
+    "debug": true,
+    "lintScripts": false,
+    "preprocessorLocations": "assets",
+    "preprocessorScriptOutput": "assets/scripts",
+    "preprocessorStyleOutput": "assets/css",
+    "projectName": "PersonalSite",
+    "projectDescription": "A simple empty boilerplate for a fresh start",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "mixture",
+    "useCompass": false,
+    "simpleModePartnerServer": null,
+    "simpleModeFileTypes": null,
+    "modelSource": null,
+    "domain": null,
+    "convertHtmlOutput": null,
+    "convertHtmlExtension": ".html",
+    "followLeader": true,
+    "routes": [
+        { 
+            "route": "blog-page-:page",
+            "template": "blog-page-1",
+            "redirect": null
+        }
+    ],
+    "customRuby": false,
+    "customRubyPath": null,
+    "remoteDebugPort": 0,
+    "optimiseImages": true,
+    "password": null,
+    "ignoreDir": "ignore",
+    "customTodos": null,
+    "ftpSettings": null,
+    "autoPrefixer": {
+      "active": true,
+      "browsers": [
+        "last 1 version", 
+        "> 1%", 
+        "ie 8", 
+        "ie 7"
+      ]
+    },
+    "sass": null,
+    "sitemap": false,
+    "gitHubPages": null,
+    "less": null,
+    "optimiseSVG": true
+}

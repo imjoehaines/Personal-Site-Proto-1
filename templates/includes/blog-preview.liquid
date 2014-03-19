@@ -1,0 +1,16 @@
+{% collection "blog" by 10 order desc %}
+      <ul class="blog-preview">
+      {% for post in collection.items %}
+	
+	        <li class="blog-post">
+	            <h2><a href="{{ post.slug }}">{{ post.title }}</a></h2>
+	            <p class="date">{{ post.date | date: "%A, %B %d, %Y" }}</p>
+	            <p class="preview">{% include post-preview %}</p>
+	        </li>
+
+      {% endfor %}
+      </ul>
+
+{% include pagination %}
+
+{% endcollection %}	
