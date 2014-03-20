@@ -46,9 +46,12 @@
 
 	nav li a.active {
 		border-bottom: 1px solid #FE3882;
-		border-left: none;
+		border-right: none;
 	}
 
+	.blog-img {
+		height: 10rem;
+	}
 
 }
 
@@ -73,7 +76,17 @@
 		float:none;
 	}
 
+	.blog-img {
+		height: 5rem;
+	}
+
 }
+
+
+
+
+
+
 
 
 

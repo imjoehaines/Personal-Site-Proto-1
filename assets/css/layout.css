@@ -1,16 +1,16 @@
 /*
 
 BLUE
-#0074D9
+#FF4136
 
 GREEN
-#2ECC40
+#FF4136
 
 YELLOW
 #FFDC00
 
 ORANGE
-#FF851B
+#FF4136
 
 RED
 #FF4136
@@ -27,13 +27,13 @@ BLACK
 */
 
 a, a:visited {
-	color: #FE3882;
+	color: #FF4136;
 	text-decoration: none;
 	padding: 0 0.25rem;
 }
 
 a:hover {
-	background: #FE3882;
+	background: #FF4136;
 	color: #fff;
 
 }
@@ -65,15 +65,19 @@ header.main-head h1 {
 	font-size: 2rem;
 }
 
-header.main-head img {
-	max-width: 75%;
-} 
 
 a.face-link {
 	background: none;
+	padding: 0;
 }
 
+a.face-link img {
+	max-width: 149px;
+}
+
+
 nav ul {
+	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -83,10 +87,12 @@ nav ul {
 nav li a {
 	padding: 0.5rem 1rem;
 	display: block;
+	border-right: 5px solid transparent;
+
 }
 
 nav li a.active {
-	border-left: 5px solid #FE3882;
+	border-right: 5px solid #FF4136;
 }
 
 ul.blog-preview {
@@ -104,7 +110,7 @@ ul.blog-preview h2 {
 }
 
 .date {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	float: right;
 	color: #666;
 }
@@ -117,6 +123,7 @@ ul.blog-preview h2 {
 .pagination {
 	color: #444;
 	margin-top: 1rem;
+	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ul.tags {
@@ -124,7 +131,8 @@ ul.tags {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	font-size: 0.9rem;
+	font-size: 1rem;
+	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ul.tags li {
@@ -132,12 +140,24 @@ ul.tags li {
 	margin-bottom: 0.5rem;
 }
 
+h1.tag-header, span.date {
+	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 header.blog-head {
 	overflow: hidden;
-	padding-bottom: 0.5rem;
+	padding-bottom: 1rem;
 	margin-bottom: 0.5rem;
 	border-bottom: 1px solid #ddd;
+	position: relative;
 }
+
+header.blog-head span.date{
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0;
+}
+
 
 h1.blog-title {
 	float: left;
@@ -148,6 +168,64 @@ h1.blog-title {
 	max-width: 10rem;
 }
 
+figure.blog-img {
+	overflow: hidden;
+	height: 15rem;
+    text-align: center;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.blog-img img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.blog-img figcaption {
+	position: absolute;
+	padding: 0.25rem 0.5rem;
+	bottom: 0;
+	background: white;
+	background: rgba(255,255,255, 0.75)
+}
+
+.blog-img figcaption span {
+	margin-left: 0.5rem;
+	padding-left: 0.5rem;
+	border-left: 1px solid #aaa;
+}
+
+.blog-img figcaption span a {
+	background: white;
+}
+.blog-img figcaption span a:hover {
+	background: #FF4136;
+}
+
+.blog-content h2, h3, h4 {
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+.blog-content p {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+
+.blog-content ul {
+	clear: both;
+}
+
+.blog-content ul.tags {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	padding-top: 0.5rem;
+	border-top: 1px solid #ddd;
+}
 
 
 a.disabled {
@@ -161,6 +239,127 @@ a.disabled:hover {
 	cursor: default;
 	border: none;
 }
+
+
+
+.left {
+	float: left;
+	margin: 0.5rem 1rem 0.5rem 0;
+}
+.right {
+	float: right;
+	margin: 0.5rem 0 0.5rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -10,13 +10,13 @@
 	<a class="page-link disabled">Previous</a>
 {% endif %}
 
-<em class="pagination">Showing posts {{ collection.current_offset | plus: 1 }} -
+<span class="pagination">Showing posts {{ collection.current_offset | plus: 1 }} -
 	{% if collection.next %}
 		{{ collection.current_offset | plus: collection.page_size }} 
 	{% else %}
 		{{ collection.size }}
 	{% endif %}
-of {{ collection.size }}</em>
+of {{ collection.size }}</span>
 
 {% if collection.next %}
 	<a href="{{ pageurl }}{{ collection.current_page | plus:1 }}" class="page-link">Next</a>

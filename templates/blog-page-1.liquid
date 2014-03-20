@@ -1,6 +1,8 @@
+{% block title %}Blog | Joe Haines{% endblock %}
+
 {% block content %} 
 	{% if mixture.route.tag %}
-		<h1>#{{ mixture.route.tag }}</h1>
+		<h1 class="tag-header">#{{ mixture.route.tag }}</h1>
 		{% assign blogpage = false %}
 		{% assign tagpage = mixture.route.tag %}
 	{% else %}
