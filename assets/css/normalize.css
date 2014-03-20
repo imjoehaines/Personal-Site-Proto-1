@@ -1,6 +1,43 @@
-h1,h2,h3,h4,h5,h6,p,li {
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+body, h1,h2,h3,h4,h5,h6,p,li {
 	margin: 0;
 }
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+img {
+	max-width: 100%;
+}
+
+abbr {
+	border-bottom: 1px dotted #FE3882;
+	cursor: help;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

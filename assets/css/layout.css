@@ -26,16 +26,6 @@ BLACK
 
 */
 
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-}
-
 a, a:visited {
 	color: #FE3882;
 	text-decoration: none;
@@ -48,22 +38,9 @@ a:hover {
 
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-weight: normal;
-}
-
-img {
-	max-width: 100%;
-}
-
-abbr {
-	border-bottom: 1px dotted #FE3882;
-	cursor: help;
-}
-
 .wrapper {
 	padding: 1rem;
-	width: 100%;
+	width: 90%;
 	margin: 1rem auto;
 	max-width: 57rem;
 }
@@ -75,20 +52,25 @@ abbr {
 	border-left: 1px solid #ddd;
 }
 
-header {
+
+header.main-head {
+	width: 22.5%;
 	margin: 0;
 	padding: 1rem 0 0 1rem;
-	position:fixed;
 	text-align: right;
-	width: 22.5%;
+	float: left;
 }
 
-header h1 {
+header.main-head h1 {
 	font-size: 2rem;
 }
 
-header a, header a:hover {
-	border: none;
+header.main-head img {
+	max-width: 75%;
+} 
+
+a.face-link {
+	background: none;
 }
 
 nav ul {
@@ -147,10 +129,19 @@ ul.tags {
 
 ul.tags li {
 	float: left;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
+header.blog-head {
+	overflow: hidden;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #ddd;
+}
 
+h1.blog-title {
+	float: left;
+}
 
 
 .portfolio-img {
@@ -170,6 +161,64 @@ a.disabled:hover {
 	cursor: default;
 	border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

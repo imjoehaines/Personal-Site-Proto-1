@@ -1,1 +1,1 @@
-h1,h2,h3,h4,h5,h6,li,p{margin:0}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{font-size:100%}body,h1,h2,h3,h4,h5,h6{font-size-adjust:.5}body,h1,h2,h3,h4,h5,h6,li,p{margin:0}h1,h2,h3,h4,h5,h6{font-weight:400}img{max-width:100%}abbr{border-bottom:1px dotted #FE3882;cursor:help}

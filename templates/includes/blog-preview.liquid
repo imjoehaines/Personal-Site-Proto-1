@@ -1,4 +1,3 @@
-{% collection "blog" by 5 order desc %}
       <ul class="blog-preview">
       {% for post in collection.items %}
 	
@@ -6,14 +5,12 @@
 	            <h2><a href="{{ post.slug }}">{{ post.title }}</a></h2>
 	            
 	            <span class="date">{{ post.date | date: "%A, %B %d, %Y" }}</span>
-
-	            <ul class="tags">
-	            	{% for tag in post.tags %}
-	            	<li>
-	            		<a href="tag/{{ tag | downcase }}">#{{ tag | downcase }}</a>
-	            	</li>
-	            	{% endfor %}
-	            </ul>
+				
+				<ul class="tags">
+					{% for tag in post.tags %}
+						{% include "tagination" %}
+					{% endfor %}
+				</ul>
 
 	            <p class="preview">{% include post-preview %}</p>
 	        </li>
@@ -22,5 +19,3 @@
       </ul>
 
 {% include pagination %}
-
-{% endcollection %}	

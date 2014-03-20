@@ -15,11 +15,21 @@
         <div class="wrapper">
             {% include "header" %}
 
+            {% assign post = model %}   
             <article class="content-wrapper">
-                <h1>{{ model.title }}</h1>
-                <em class="blog-date">{{ model.date | date: "%A, %B %d, %Y" }}</em>
+                <header class="blog-head">
+                    <h1 class="blog-title">{{ post.title }}</h1>
+                    <em class="date">{{ post.date | date: "%A, %B %d, %Y" }}</em>
+                </header>
 
                 {% block content %}{% endblock %}
+                
+                <ul class="tags">
+                    {% for tag in post.tags %}
+                        {% include "tagination" %}
+                    {% endfor %}
+                </ul>
+
             </article>
 
         </div>

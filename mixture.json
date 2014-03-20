@@ -33,6 +33,11 @@
             "redirect": null
         },
         {
+            "route": "blog/tag/:tag/page-:page",
+            "template": "blog-page-1",
+            "redirect": null
+        },
+        {
             "route": "portfolio/category/:category",
             "template": "portfolio",
             "redirect": null
