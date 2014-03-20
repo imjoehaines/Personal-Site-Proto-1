@@ -34,20 +34,17 @@ BLACK
 
 body {
 	margin: 0;
-	background: #111; /* # TODO: remove this */
 }
 
 a, a:visited {
 	color: #FE3882;
 	text-decoration: none;
-	border-bottom: 1px dotted #aaa;
 	padding: 0 0.25rem;
 }
 
 a:hover {
 	background: #FE3882;
 	color: #fff;
-	border-bottom: 1px solid #FE3882;
 
 }
 
@@ -55,27 +52,39 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: normal;
 }
 
+img {
+	max-width: 100%;
+}
+
+abbr {
+	border-bottom: 1px dotted #FE3882;
+	cursor: help;
+}
 
 .wrapper {
 	padding: 1rem;
-	width: 90%;
-	margin: 2rem auto;
-	background: white; /* # TODO: remove this */
+	width: 100%;
+	margin: 1rem auto;
+	max-width: 57rem;
+}
+
+.content-wrapper {
+	max-width: 80%;
+	margin: 1rem 0 0 25%;
+	padding: 0.5rem 1rem 1rem 1rem;
+	border-left: 1px solid #ddd;
 }
 
 header {
-	margin: 0 -1rem 1rem -1rem;
-	padding: 0 1rem 0.25rem 1rem;
-	overflow: hidden;
-	border-bottom: 1px solid black;
+	margin: 0;
+	padding: 1rem 0 0 1rem;
+	position:fixed;
+	text-align: right;
+	width: 22.5%;
 }
 
 header h1 {
-	max-width: 25%;
-	float: left;
-	margin-right: 1rem;
 	font-size: 2rem;
-	font-weight: bold;
 }
 
 header a, header a:hover {
@@ -83,41 +92,70 @@ header a, header a:hover {
 }
 
 nav ul {
-	width: 75%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	font-size: 1.25rem;
 }
 
-nav li {
-
+nav li a {
+	padding: 0.5rem 1rem;
+	display: block;
 }
 
-nav li a {
-	padding: 0.5rem;
-	float: left;
+nav li a.active {
+	border-left: 5px solid #FE3882;
 }
 
 ul.blog-preview {
 	list-style-type: none;
-	margin: 1rem 0;
+	margin: 0;
 	padding: 0;
 }
 
-ul.blog-preivew li {
-	margin-bottom: 1rem;
+ul.blog-preview li {
+	margin-bottom: 2rem;
+}
+
+ul.blog-preview h2 {
+	margin-bottom: 0.5rem;
+}
+
+.date {
+	font-size: 0.9rem;
+	float: right;
+	color: #666;
 }
 
 .blog-post {
-	padding: 0.25rem 1.5rem;
+	padding: 0.25rem 0;
 	background: #fdfdfd;
 }
 
 .pagination {
 	color: #444;
+	margin-top: 1rem;
 }
 
+ul.tags {
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-size: 0.9rem;
+}
+
+ul.tags li {
+	float: left;
+	margin-bottom: 1rem;
+}
+
+
+
+
+.portfolio-img {
+	max-width: 10rem;
+}
 
 
 
@@ -132,6 +170,116 @@ a.disabled:hover {
 	cursor: default;
 	border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

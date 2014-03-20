@@ -1,0 +1,8 @@
+<li>
+	<a href="{{ small.slug }}">
+		{% if small.img %}
+			<img src="{{ small.img | asset_url }}" class="portfolio-img" />
+		{% endif %}
+		{% if small.language %}{{ small.language | camelize }} - {% endif %}{{ small.title }}
+	</a>
+</li>

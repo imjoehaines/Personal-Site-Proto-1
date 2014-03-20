@@ -17,8 +17,9 @@
             {% include "header" %}
             
             <!-- Content block, child page inject content -->
-            {% block content %}{% endblock %}
-
+            <div class="content-wrapper">
+                {% block content %}{% endblock %}
+            </div>
         </div>
         {% block scripts %}{% endblock %}
     </body>

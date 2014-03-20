@@ -16,9 +16,6 @@
             {% include "header" %}
 
             <article class="content-wrapper">
-                <h1>{{ model.title }}</h1>
-                <em class="blog-date">{{ model.date | date: "%A, %B %d, %Y" }}</em>
-
                 {% block content %}{% endblock %}
             </article>
 

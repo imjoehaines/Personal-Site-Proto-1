@@ -1,11 +1,119 @@
-/* Smartphones (portrait) ----------- */
-@media (max-width : 850px) {
-/* Styles */
-	body {
-		background: pink;
+@media (max-width: 850px) {
+	header {
+		position: static;
+		float:none;
+		width: 100%;
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+
+	header h1 {
+		padding: 0;
+	}
+	
+	nav ul, nav li {
+		overflow: hidden;
+	}
+
+	nav li {
+		margin: 0;
+		float: left;
+	}
+	
+	nav li a {
+		min-height: 5rem;
+		padding-top: 2rem;
+	}
+
+	nav li:first-child a {
+		padding-top: 0.5rem;
+	}
+
+
+	.content-wrapper {
+		width: 100%;
+		max-width: 100%;
+		margin: 1rem 0;
+		border: none;
+	}
+
+	nav li a.active {
+		border-bottom: 1px solid #FE3882;
+		border-left: none;
+	}
+
+
+}
+
+@media (max-width: 500px) {
+	
+	nav li {
+		width: 33%;
+
+	}
+
+	nav li a {
+		min-height: 100%;
+		padding-top: 0.5rem;
+	}
+
+	nav li:first-child a, nav li:first-child {
+		width: 100%;
+		float:none;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

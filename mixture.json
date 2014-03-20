@@ -26,11 +26,21 @@
             "route": "blog-page-:page",
             "template": "blog-page-1",
             "redirect": null
+        },
+        {
+            "route": "blog/tag/:tag",
+            "template": "blog-page-1",
+            "redirect": null
+        },
+        {
+            "route": "portfolio/category/:category",
+            "template": "portfolio",
+            "redirect": null
         }
     ],
     "customRuby": false,
     "customRubyPath": null,
-    "remoteDebugPort": 0,
+    "remoteDebugPort": 7777,
     "optimiseImages": true,
     "password": null,
     "ignoreDir": "ignore",

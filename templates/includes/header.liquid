@@ -1,19 +1,19 @@
 <header>
-	<h1><a href="/">{{ global.title }}</a></h1>
 	
 	<nav>
 		<ul>
 			<li>
-				<a href="/">About</a>
+				<a href="/" {% if mixture.url =="index" %}class="active"{% endif %}><h1>{{ global.title }}</h1>
+				About</a>
 			</li>
 			<li>
-				<a href="#">Portfolio</a>
+				<a href="/portfolio" {% if mixture.url contains "portfolio" %}class="active"{% endif %}>Portfolio</a>
 			</li>
 			<li>
-				<a href="/blog-page-1">Blog</a>
+				<a href="/blog-page-1" {% if mixture.url contains "blog" %}class="active"{% endif %}>Blog</a>
 			</li>
 			<li>
-				<a href="#">CV</a>
+				<a href="#" {% if mixture.url =="CV" %}class="active"{% endif %}>CV</a>
 			</li>
 		</ul>
 	</nav>
