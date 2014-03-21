@@ -51,6 +51,18 @@ a:hover {
 	border-left: 1px solid #ddd;
 }
 
+.content-wrapper footer {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid #ddd;
+}
+
+.content-wrapper footer p {
+	margin-bottom: 0;
+	font-size: 1em;
+	color: #666;
+}
+
 
 header.main-head {
 	width: 22.5%;
@@ -103,6 +115,10 @@ ul.blog-preview h2 a {
 	margin: 0 -0.25em;
 }
 
+section.blog-preview h2 {
+	font-size: 1.25em;
+}
+
 .blog-post {
 	margin-bottom: 1.5em;
 }
@@ -114,9 +130,10 @@ ul.blog-preview h2 a {
 }
 
 .pagination {
-	color: #444;
 	margin-top: 1em;
 	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.15em;
+	margin-left: -0.25em;
 }
 
 ul.tags {
@@ -144,9 +161,6 @@ header.blog-head {
 	position: relative;
 }
 
-header.blog-head span.date{
-	float: none;
-}
 
 header.blog-head h1, header.blog-head h2, header.blog-head h3 {
 	margin-bottom: 0;
@@ -162,11 +176,11 @@ figure.blog-img div {
 	overflow: hidden;
 	height: 15em;
     text-align: center;
-    margin-top: 1em;
+    margin: 1em 0;
     position: relative;
 }
 
-.blog-img img {
+figure.blog-img img {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -176,12 +190,36 @@ figure.blog-img div {
 }
 
 
-.blog-img figcaption {
-	padding: 0.25em 0;
+figure.blog-img figcaption {
+	position: absolute;
+	padding: 0.25rem 0.5rem;
+	bottom: 0;
+	background: white;
+	background: rgba(255,255,255, 0.75)
 }
 
-.blog-img figcaption span.divider {
+figure.blog-img figcaption span.divider {
 	margin-left: 0.5em;
+}
+
+div.blog-img {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+
+div.blog-img a {
+	padding:0;
+	background: none;
+}
+
+div.blog-img img {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+span.blog-img-caption {
+	color: #555;
+	display: inline-block;
 }
 
 .blog-content h2, h3, h4 {
@@ -196,13 +234,37 @@ figure.blog-img div {
 	clear: both;
 }
 
-.blog-content ul.tags {
-	margin-top: 1em;
-	margin-bottom: 2em;
-	padding-top: 0.5em;
-	border-top: 1px solid #ddd;
+blockquote {
+	margin: 0 1.5em 1.5em 1.5em;
+	padding: 1em 1.5em;
+	border-left: 5px solid #ddd;
+	background: #f9f9f9;
+	overflow: hidden;
 }
 
+blockquote::before {
+	content: open-quote;
+	font-size: 3.75em;
+	vertical-align: -0.3em;
+	line-height: 0;
+	color: #aaa;
+}
+blockquote > p:first-child {
+	display: inline;
+	padding-bottom: 0.5em;
+}
+blockquote > p:last-of-type::after {
+	content: close-quote;
+	font-size: 3em;
+	margin-left: 0.1em;
+	vertical-align: -0.3em;
+	line-height: 0;
+	color: #aaa;
+}
+
+pre[class*="language-"] {
+	margin-bottom: 1.5em;
+}
 
 .cv-date {
 	font-size: 1.25em;
@@ -237,6 +299,75 @@ a.disabled:hover {
 	float: right;
 	margin: 0.5em 0 0.5em 1em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

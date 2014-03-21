@@ -1,0 +1,47 @@
+---
+title: Designing This Site
+published: true
+layout: post
+tags: [design, programming, webdev, mixture]
+img: 21-3-14-lights.jpg
+caption: An analogy of my design process
+imgattribution: false
+imgsrc: Gratisography
+imgsrcurl: http://www.gratisography.com/
+---
+
+<p>
+	Against all knowledge of best practices and common sense, I started working on this website with no real design at all &mdash; just some vague ideas in my head. Obviously this isn&rsquo;t the best of ideas but it seems to have worked out in this case.	I&rsquo;m writing this before the site is finished and published, but it&rsquo;s coming together well.
+</p>
+<p>
+	The main reason why I didn&rsquo;t bother with any design work was because I had started this project as a means to get more familiar with <a href="http://mixture.io/">Mixture</a>, not really intending to publish the result. In fact, it wasn&rsquo;t until I had a working prototype that I wrote any <abbr title="Cascading Style Sheets">CSS</abbr> at all. Focusing on content first is pretty common, but before this project I would typically work on the content and styling at the same time because it felt more natural that way. However, by styling the existing content (I mostly just added classes to stuff) the website should be easier to redesign without touching the much of the underlying HTML/Liquid templates.
+</p>
+<p>
+	I&rsquo;m a big fan of minimal web design (as you might have noticed) but there&rsquo;s still room for a couple of more fancy elements; like blockquotes: 
+</p>
+
+<blockquote>
+	<p>Ladies and gentlemen, this is your stewardess speaking. We regret any inconvenience the sudden cabin movement might have caused; this is due to periodic air pockets we encountered. There&rsquo;s no reason to become alarmed and we hope you enjoy the rest of your flight&hellip; By the way, is there anyone on board who knows how to fly a plane?</p>
+	<footer>
+		<cite>
+			<p>Elaine Dickinson - Airplane!</p>
+		</cite>
+	</footer>
+</blockquote>
+
+<p>
+	Or awesome code blocks with syntax highlighting (courtesy of <a href="http://prismjs.com/">Prism</a>): 
+</p>
+
+<pre class="line-numbers"><code class="language-python">def hello(name):
+	print("Hi " + name + "!")
+name = "Grave McDave"
+hello(name)</code></pre>
+
+<p>
+	As well as inline code: <code class="language-javascript">console.log("Hey, you!")</code>
+</p>
+
+<p>
+	But at the end of the day I wanted to make a blog that focussed on being legible above all else. I took inspiration from <a href="https://medium.com/">Medium</a> and an bunch of blogs I read to create a layout that <em>hopefully</em> doesn&rsquo;t get in the way of the content which is, after all, the reason you&rsquo;d read a blog post. 
+</p> 

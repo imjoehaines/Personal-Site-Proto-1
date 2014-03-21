@@ -1,0 +1,24 @@
+---
+title: Developing This Site
+published: true
+layout: post
+tags: [design, programming, webdev, mixture]
+img: 21-3-14-working.jpg
+caption: A 100% accurate reflection of my desk
+imgattribution: false
+imgsrc: Galymzhan Abdugalimov via Unsplash
+imgsrcurl: http://unsplash.com/
+---
+
+<p>
+	The development of this site was significantly less chaotic than <a href="designing-this-site">the design</a>. I knew from the start that I was going to use <a href="http://mixture.io">Mixture</a> for development and that&rsquo;s worked out really well. I&rsquo;d used Mixture on projects before, back when it was in beta, so it was pretty easy to get a fully-functional prototype in a couple of hours work. Mixture still has some issues with documentation though and there were a few times where the single-sentence explanations were frustratingly vague. Overall though, it&rsquo;s been a positive experience.
+</p>
+<p>
+	One of the key reasons why I decided to use Mixture was that I knew I wanted to have a blog but didn&rsquo;t want to grapple with a full-scale blogging platform. As good as Wordpress and the like are, I&rsquo;ve never felt like I have enough control over the styling or content and it&rsquo;s very easy to end up with a site that looks <em>super</em> similar to someone else&rsquo;s, completely by accident. With Mixture I can start from scratch &mdash; no need to go through an example removing everything I don&rsquo;t need &mdash; and use my own templates and styling. As a bonus it can also spit out a static HTML site so there&rsquo;s no additional software to install and maintain on the server; you can even <a href="http://docs.mixture.io/github-pages">host it on GitHub Pages</a> if you&rsquo;re that way inclined.
+</p>
+<p>
+	It&rsquo;s hard not to sit here and praise Mixture forever, it allows for so much dynamism on a static site it&rsquo;s crazy. Take the image the top of this page for example; the caption won&rsquo;t display anything unless there&rsquo;s a caption in the metadata of this blog post <em>or</em> the image requires attribution. With a couple of <em>if</em> statements Mixture will auto-magically decide to show just a caption, a caption and the image source, just the image source or nothing at all. I can even grab that information and put it in the body of the blog post, like this: <a href="{{ model.imgsrcurl }}">{{ model.imgsrc }}</a> &mdash; wowzers! All of the tag lists, dates and blog post previews are done in the same way but, because it gets converted to static HTML, there&rsquo;s no logic running on a user&rsquo;s machine.
+</p>
+<p>
+	Other than Mixture, I&rsquo;m not using any other development tools &mdash; which I realise is like saying &ldquo;other than this three course meal, I&rsquo;ve not eaten anything today&rdquo;&hellip; Still, that does mean no pre-processors or boilerplates which I&rsquo;m not using because I&rsquo;m not a massive fan of either. I realise that they can save a <em>lot</em> of time but I&rsquo;ve never liked using  software that does more than you need it to. A lot of boilerplates have a lot of extra stuff that I just didn&rsquo;t need for this project. I&rsquo;m also only using JavaScript for  syntax highlighting code snippets (via <a href="http://prismjs.com/">Prism</a>) which is, again, in the name of simplicity &mdash; I&rsquo;m a firm believer in <abbr title="Keep It Simple Stupid">KISS</abbr>.
+</p>

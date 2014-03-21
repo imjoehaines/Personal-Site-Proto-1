@@ -20,6 +20,8 @@
             <!-- Content block, child page inject content -->
             <div class="content-wrapper">
                 {% block content %}{% endblock %}
+
+                {% include "footer" %}
             </div>
         </div>
         {% block scripts %}{% endblock %}

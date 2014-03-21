@@ -4,7 +4,7 @@
 	        <li class="blog-post">
 	            <h2><a href="{{ post.slug }}">{{ post.title }}</a></h2>
 	            
-	            <span class="date">{{ post.date | date: "%A, %B %d, %Y" }}</span>
+	            <span class="date">{{ post.date | date: "%A %B %d %Y" }}</span>
 				
 				{% if post.tags %}
 					<ul class="tags">

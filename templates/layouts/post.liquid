@@ -5,13 +5,9 @@
     <head>
 
         <title>{% block title %}{{ post.title }} | Joe Haines{% endblock %}</title>
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        {{ "normalize.css" | asset_url | stylesheet_tag }}
-        {{ "layout.css" | asset_url | stylesheet_tag }}
-        {{ "media-queries.css" | asset_url | stylesheet_tag }}
         
+        {% include "_head" %}
+
         {% block styles %}{% endblock %}
     </head>
     <body>
@@ -20,39 +16,42 @@
 
             <article class="content-wrapper">
                 <header class="blog-head">
-                    <h1 class="blog-title">{{ post.title }}</h1>
-                    <span class="date">{{ post.date | date: "%A, %B %d, %Y" }}</span>
-                </header>
-
-                {% if post.img %}
-                    <figure class="blog-img">
-                        <div>
-                            <img src="{{ post.img | asset_url }}" />
-                        </div>
-                        {% if post.caption or post.imgattribution %}
-                            <figcaption>
-                                <span>{{ post.caption }}</span>
-                                {% if post.imgsrc and post.imgattribution %}
-                                    <span {% if post.caption %}class="divider"{% endif %}>Source:<a href="{{ post.imgsrcurl }}">{{ post.imgsrc }}</a></span>
-                                {% endif %}
-                            </figcaption>
-                        {% endif %}
-                    </figure>
-                {% endif %}
-
-
-                <section class="blog-content">
-                    {% block content %}{% endblock %}
-                    
+                    <h2 class="blog-title">{{ post.title }}</h2>
+                    <span class="date">{{ post.date | date: "%A %B %d %Y" }}</span>
                     <ul class="tags">
                         <li>tags:</li>
                         {% for tag in post.tags %}
                             {% include "tagination" %}
                         {% endfor %}
                     </ul>
+
+                </header>
+
+                {% if post.img %}
+                    <figure class="blog-img">
+                        <div>
+                            <img src="{{ post.img | asset_url }}" />
+                            {% if post.caption or post.imgattribution %}
+                                <figcaption>
+                                    <span>{{ post.caption }}</span>
+                                    {% if post.imgsrc and post.imgattribution %}
+                                        <span {% if post.caption %}class="divider"{% endif %}>Source:<a href="{{ post.imgsrcurl }}">{{ post.imgsrc }}</a></span>
+                                    {% endif %}
+                                </figcaption>
+                            {% endif %}
+                        </div>
+                    </figure>
+                {% endif %}
+
+
+                <section class="blog-content">
+                    {% if post.subtitle %}
+                        <h2>{{ post.subtitle }}</h2>
+                    {% endif %}
+                    {% block content %}{% endblock %}
                 </section>
 
-
+                {% include "footer" %}
             </article>
 
         </div>
