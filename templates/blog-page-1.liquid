@@ -1,8 +1,16 @@
-{% block title %}Blog | Joe Haines{% endblock %}
+{% block title %}
+	{% if mixture.route.tag %}
+		#{{ mixture.route.tag }} | Joe Haines
+	{% else %}
+		Blog | Joe Haines
+	{% endif %}
+{% endblock %}
 
 {% block content %} 
 	{% if mixture.route.tag %}
-		<h1 class="tag-header">#{{ mixture.route.tag }}</h1>
+		<header class="blog-head">
+			<h1 class="tag-header">#{{ mixture.route.tag }}</h1>
+		</header>
 		{% assign blogpage = false %}
 		{% assign tagpage = mixture.route.tag %}
 	{% else %}

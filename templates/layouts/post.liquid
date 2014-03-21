@@ -6,6 +6,7 @@
 
         <title>{% block title %}{{ post.title }} | Joe Haines{% endblock %}</title>
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{ "normalize.css" | asset_url | stylesheet_tag }}
         {{ "layout.css" | asset_url | stylesheet_tag }}
@@ -25,8 +26,17 @@
 
                 {% if post.img %}
                     <figure class="blog-img">
-                        <img src="{{ post.img | asset_url }}" />
-                        <figcaption>{{ post.caption }}{% if post.imgsrc and post.imgattribution %} <span class="img-src">Image from <a href="{{ post.imgsrcurl }}">{{ post.imgsrc }}</a></span>{% endif %}</figcaption>
+                        <div>
+                            <img src="{{ post.img | asset_url }}" />
+                        </div>
+                        {% if post.caption or post.imgattribution %}
+                            <figcaption>
+                                <span>{{ post.caption }}</span>
+                                {% if post.imgsrc and post.imgattribution %}
+                                    <span {% if post.caption %}class="divider"{% endif %}>Source:<a href="{{ post.imgsrcurl }}">{{ post.imgsrc }}</a></span>
+                                {% endif %}
+                            </figcaption>
+                        {% endif %}
                     </figure>
                 {% endif %}
 

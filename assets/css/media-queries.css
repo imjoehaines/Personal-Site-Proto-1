@@ -1,12 +1,14 @@
 @media (max-width: 700px) {
+	html {
+		font-size: 90%;
+	}
+	
 	header.main-head {
-		position: static;
-		float:none;
+		float: none;
 		width: 100%;
 		padding-bottom: 0;
 		overflow: hidden;
 		text-align: center;
-
 	}
 
 	header.main-head h1 {
@@ -49,14 +51,17 @@
 		border-right: none;
 	}
 
-	.blog-img {
+	figure.blog-img div {
 		height: 10rem;
 	}
 
 }
 
 @media (max-width: 500px) {
-	
+	html {
+		font-size: 80%;
+	}
+
 	header.main-head img {
 		display: none;
 	}
@@ -76,11 +81,25 @@
 		float:none;
 	}
 
-	.blog-img {
+	figure.blog-img div {
 		height: 5rem;
 	}
 
+	.date {
+		float: none;
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
