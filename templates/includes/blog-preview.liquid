@@ -4,14 +4,11 @@
 	        <li class="blog-post">
 	            <h2><a href="{{ post.slug }}">{{ post.title }}</a></h2>
 	            
-	            <span class="date">{{ post.date | date: "%A %B %d %Y" }}</span>
+	            <span class="date">{% include "date" %}</span>
 				
 				{% if post.tags %}
 					<ul class="tags">
-	                    <li>tags:</li>
-						{% for tag in post.tags %}
-							{% include "tagination" %}
-						{% endfor %}
+						{% for tag in post.tags %}{% include "tagination" %}{% endfor %}
 					</ul>
 				{% else %}
 					<ul class="tags">
@@ -24,5 +21,3 @@
 
       {% endfor %}
       </ul>
-
-{% include pagination %}

@@ -1,0 +1,23 @@
+{% block title %}
+	Archive | Joe Haines
+{% endblock %}
+
+{% block content %}
+	<header class="blog-head">
+		<h2 class="blog-title">Archive</h2>
+	</header>
+
+	{% archive "blog" %}
+		
+		{% for item in archive.items %}
+			<h2 class="archive">{{ item.year }}</h2>
+			<ul class="archive">
+				{% for post in item.children %}
+					<li><a href="{{ post.slug }}">{{ post.title }}
+						<span class="date">{% include "date" %}</span></a></li>
+				{% endfor %}
+			</ul>
+		<p>Showing all {{ item.count }} blog posts</p>
+		{% endfor %}
+	{% endarchive %}
+{% endblock %}

@@ -1,29 +1,25 @@
 <!doctype html>
 <html lang="en">
-    <head>
+	<head>
 
-        <title>{% block title %}Joe Haines{% endblock %}</title>
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}Joe Haines{% endblock %}</title>
+		
+		{% include "_head" %}
 
-        {{ "normalize.css" | asset_url | stylesheet_tag }}
-        {{ "layout.css" | asset_url | stylesheet_tag }}
-        {{ "media-queries.css" | asset_url | stylesheet_tag }}
+		{% block styles %}{% endblock %}
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Include -->
+			{% include "header" %}
+			
+			<!-- Content block, child page inject content -->
+			<div class="content-wrapper">
+				{% block content %}{% endblock %}
 
-        {% block styles %}{% endblock %}
-    </head>
-    <body>
-        <div class="wrapper">
-            <!-- Include -->
-            {% include "header" %}
-            
-            <!-- Content block, child page inject content -->
-            <div class="content-wrapper">
-                {% block content %}{% endblock %}
-
-                {% include "footer" %}
-            </div>
-        </div>
-        {% block scripts %}{% endblock %}
-    </body>
+			</div>
+			{% include "footer" %}
+		</div>
+		{% block scripts %}{% endblock %}
+	</body>
 </html>

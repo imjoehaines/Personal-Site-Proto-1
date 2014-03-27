@@ -1,3 +1,14 @@
-{% block content %} 
-	<p>HI! This is some content</p> 
+{% block content %}
+	<h2>Hi!</h2>
+	<p>I&rsquo;m Joe Haines, a software developer from Somerset in the UK. This is my personal blog where I write about some of the stuff I like; mostly programming and web design. I do other stuff, like play the bass guitar (I&rsquo;m pretty good!) so I&rsquo;ll probably mention that too.</p>
+	<p>You can find me at various places around the web&hellip;</p>
+	<ul>
+		{% for link in global.social %}
+			<li>
+				<p><a href="{{ link.url }}" class="{% if link.icon-class %}{{ link.icon-class }}{% else %}icon-none{% endif %}" style="margin: -0.25em;">{{ link.title}} ({{ link.user }})</a></p>
+			</li>
+		{% endfor %}
+	</ul>
+	<p>&hellip;or just email me (<a class="icon-mail" href="mailto:hello@joehaines.co.uk">hello@joehaines.co.uk</a>) if you want to talk.</p>
+
 {% endblock %}

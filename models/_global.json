@@ -1,4 +1,109 @@
 {
 	"title": "Joe Haines",
-	"blog-loc": "blog-page-"
+	"navigation": [
+		{
+			"title": "Blog",
+			"slug": "/blog/page-1"
+		},
+		{
+			"title": "Archive",
+			"slug": "/archive"
+		},
+		{
+			"title": "RSS",
+			"slug": "/rss.xml",
+			"icon-class": "icon-rss"
+		},
+		{
+			"title": "Attribution",
+			"slug": "/attribution"
+		}
+	],
+	"social": [
+		{
+			"title": "GitHub",
+			"user": "imjoehaines",
+			"url": "https://github.com/imjoehaines",
+			"icon-class": "icon-github"
+		},
+		{
+			"title": "Twitter",
+			"user": "@imjoehaines",
+			"url": "https://twitter.com/imjoehaines",
+			"icon-class": "icon-twit"
+		},
+		{
+			"title": "Dribbble",
+			"user": "joehaines",
+			"url": "http://dribbble.com/joehaines",
+			"icon-class": "icon-dribbble"
+		}
+	],
+	"attribution": [
+		{
+			"title": "Font Awesome",
+			"url": "http://fontawesome.io/",
+			"licence": "SIL OFL 1.1",
+			"licence-url": "http://scripts.sil.org/OFL",
+			"use": "Icon font"
+		},
+		{
+			"title": "Fontello",
+			"url": "http://fontello.com/",
+			"licence": "MIT",
+			"licence-url": "http://opensource.org/licenses/MIT",
+			"use": "Custom icon font generator"
+		},
+		{
+			"title": "ie7-js",
+			"url": "https://code.google.com/p/ie7-js/",
+			"licence": "MIT",
+			"licence-url": "http://opensource.org/licenses/MIT",
+			"use": "Internet Explorer 7, 8 & 9 compatability"
+		},
+		{
+			"title": "Prism",
+			"url": "http://prismjs.com/",
+			"licence": "MIT",
+			"licence-url": "http://opensource.org/licenses/MIT",
+			"use": "Syntax highlighting"
+		},
+		{
+			"title": "Mixture",
+			"url": "http://mixture.io/",
+			"licence": null,
+			"licence-url": null,
+			"use": "Development tool-set / static site generator"
+		}
+	],
+	"dates": [
+		{
+			"day": "1",
+			"ordinal": "st"
+		},
+		{
+			"day": "2",
+			"ordinal": "nd"
+		},
+		{
+			"day": "3",
+			"ordinal": "rd"
+		},
+		{
+			"day": "21",
+			"ordinal": "st"
+		},
+		{
+			"day": "22",
+			"ordinal": "nd"
+		},
+		{
+			"day": "23",
+			"ordinal": "rd"
+		},
+		{
+			"day": "31",
+			"ordinal": "st"
+		}
+	]
 }

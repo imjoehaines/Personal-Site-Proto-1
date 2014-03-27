@@ -1,3 +1,42 @@
-<footer>
-    <p>Copyright&copy; 2014 Joe Haines</p>
+<footer class="main-foot">
+	<section>
+		<h3>Navigation</h3>
+
+		<nav>
+			<ul>
+				{% for link in global.navigation %}
+					
+					<li>
+						<a href="{{ link.slug }}" class="{% if link.icon-class %}{{ link.icon-class }}{% else %}icon-none{% endif %}">{{ link.title }}</a>
+					</li>
+
+				{% endfor %}
+			</ul>
+		</nav>
+
+	</section>
+
+	<section>
+		<h3>Follow Me</h3>
+	
+		<nav>
+			<ul>
+				{% for link in global.social %}
+					
+					<li>
+						<a href="{{ link.url }}" class="{% if link.icon-class %}{{ link.icon-class }}{% else %}icon-none{% endif %}">{{ link.user }}</a>
+					</li>
+
+				{% endfor %}
+			</ul>
+		</nav>
+
+	</section>
+
+	<section>
+		<h3>Talk To Me</h3>
+	
+		<p>If you like my work and want to collaborate on a project &mdash; or you just want to have a chat &mdash; please send me an email; <a class="icon-mail" href="mailto:hello@joehaines.co.uk">hello@joehaines.co.uk</a>
+	</section>
+
 </footer>

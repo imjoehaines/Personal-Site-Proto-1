@@ -1,0 +1,29 @@
+{% layout "none" %}
+{% contenttype "application/xml" %}
+<rss version="2.0">
+	<channel>
+		<generator>Mixture</generator>
+		<title>Joe Haines' Blog</title>
+		<link>joehaines.co.uk/</link>
+		<description>
+			Personal blog of Joe Haines as found at joehaines.co.uk
+		</description>
+		<language>en</language>
+		<webMaster>joe@joehaines.co.uk</webMaster>
+		<copyright>{{ "now" | date: "%Y" }} Joe Haines</copyright>
+		{% collection "blog" by 5 order desc %}
+			{% for item in collection.items %}
+				<item>
+					<title>{{ item.title | html_encode }}</title>
+					<link>{{ item.slug }}</link>
+					<guid>{{ item.slug }}</guid>
+					{% for tag in item.tags %}
+						<category>{{ tag | html_encode }}</category>
+					{% endfor %}
+					<pubDate>{{ item.date | date:'%a, %d %b %Y %H:%M:%S GMT'}}</pubDate>
+					<description>{{ item.body | strip_html | truncate:250,'...' | html_encode }}</description>
+				</item>
+			{% endfor %}
+		 {% endcollection %}
+	</channel>
+</rss>

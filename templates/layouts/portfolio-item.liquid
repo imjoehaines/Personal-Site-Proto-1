@@ -3,12 +3,8 @@
     <head>
 
         <title>{% block title %}Empty{% endblock %}</title>
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {{ "normalize.css" | asset_url | stylesheet_tag }}
-        {{ "layout.css" | asset_url | stylesheet_tag }}
-        {{ "media-queries.css" | asset_url | stylesheet_tag }}
+        {% include "_head" %}
 
         {% block styles %}{% endblock %}
     </head>

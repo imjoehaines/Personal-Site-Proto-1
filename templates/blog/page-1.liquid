@@ -1,0 +1,27 @@
+{% block title %}
+	{% if mixture.route.tag %}
+		#{{ mixture.route.tag }} | Joe Haines
+	{% else %}
+		Blog | Joe Haines
+	{% endif %}
+{% endblock %}
+
+{% block content %} 
+	{% if mixture.route.tag %}
+		<header class="blog-head">
+			<h2>#{{ mixture.route.tag }}</h2>
+		</header>
+		{% assign blogpage = false %}
+		{% assign tagpage = mixture.route.tag %}
+	{% else %}
+			{% assign blogpage = true %}
+	{% endif %}
+
+	{% collection "blog"  query "tags={{ mixture.route.tag }}" by 5 order desc %}
+	
+		{% include "blog-preview" with blog.items %}
+		
+		{% include pagination %}
+
+	{% endcollection %}
+{% endblock %}

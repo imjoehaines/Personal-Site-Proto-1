@@ -1,20 +1,18 @@
 <header class="main-head">
-	<a href="/" class="face-link"><img src="{{ "face.png" | asset_url }}" /></a>
+
 	<nav>
 		<ul>
 			<li>
-				<a href="/" {% if mixture.url =="index" %}class="active"{% endif %}><h1>{{ global.title }}</h1>
+				<a href="/"><h1>{{ global.title }}</h1>
 				About</a>
 			</li>
-			<!--<li>
-				<a href="/portfolio" {% if mixture.url contains "portfolio" %}class="active"{% endif %}>Portfolio</a>
-			</li>-->
 			<li>
-				<a href="/blog-page-1" {% if mixture.url contains "blog" %}class="active"{% endif %}>Blog</a>
+				<a href="/blog/page-1">Blog</a>
 			</li>
 			<li>
-				<a href="/cv" {% if mixture.url =="cv" %}class="active"{% endif %}>CV</a>
+				<a href="/archive">Archive</a>
 			</li>
 		</ul>
 	</nav>
+	
 </header>

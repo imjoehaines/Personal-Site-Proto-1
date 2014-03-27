@@ -1,11 +1,5 @@
 <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- PRISM -->
-{{ "prism.css" | asset_url | stylesheet_tag }}
-{{ "prism.js" | asset_url | script_tag }}
-
-{{ "normalize.css" | asset_url | stylesheet_tag }}
-{{ "layout.css" | asset_url | stylesheet_tag }}
-{{ "media-queries.css" | asset_url | stylesheet_tag }}
-
+{{ "_scripts.js" | asset_url | script_tag }}
+{{ "_style.css" | asset_url | stylesheet_tag }}
+<!--[if IE]>{{ "IE9.js" | asset_url | script_tag }}<![endif]-->

@@ -23,7 +23,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
 h1 {
 	font-size: 3em;
 }
@@ -44,6 +43,10 @@ p {
 	font-size: 1.25em;
 	margin-bottom: 1.5em;
 	line-height: 1.5;
+}
+
+section, article, aside, header, footer, nav, figure, figcaption {
+	display: block;
 }
 
 img {
@@ -73,91 +76,10 @@ figure {
 	padding: 0;
 }	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ul {
+	margin: -1em 0 1em 0;
+}
+
+sup {
+	vertical-align: top;
+}

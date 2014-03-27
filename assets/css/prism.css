@@ -27,7 +27,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
+	margin: 1.5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
 }
@@ -151,5 +151,9 @@ pre.line-numbers > code {
 			padding-right: 0.8em;
 			text-align: right;
 		}
+
+
+
+
 
 

@@ -1,0 +1,14 @@
+{% assign dateOrdinal = null %}
+
+{% capture dateDay %}{{ post.date | date: "%d" }}{% endcapture %}
+{% for date in global.dates %}
+	{% if date.day == dateDay %}
+		{% capture dateOrdinal %}{{ date.ordinal }}{% endcapture %}
+	{% endif %}
+{% endfor %}
+
+{% if dateOrdinal == null %}
+	{% assign dateOrdinal = "th" %}
+{% endif %}
+
+{{ post.date | date: "%B %d" }}<sup>{{ dateOrdinal }}</sup> {{ post.date | date: "%Y" }}

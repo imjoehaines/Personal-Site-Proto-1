@@ -16,7 +16,7 @@
 	}
 
 	header.main-head img {
-		max-height: 5rem;
+		max-height: 5em;
 		float: left;
 	}
 	
@@ -24,25 +24,28 @@
 		overflow: hidden;
 	}
 
-	nav li {
+	.main-head nav li {
 		margin: 0;
 		float: left;
+		min-width: 20%
 	}
 	
-	nav li a {
-		min-height: 5rem;
-		padding-top: 2rem;
+	.main-head nav li a {
+		min-height: 5em;
+		padding-top: 2em;
+		padding-left: 1em;
+		border: none;
 	}
 
 	nav li:first-child a {
-		padding-top: 0.5rem;
+		padding-top: 0.5em;
 	}
 
 
 	.content-wrapper {
 		width: 100%;
 		max-width: 100%;
-		margin: 1rem 0;
+		margin: 1em 0;
 		border: none;
 	}
 
@@ -52,8 +55,17 @@
 	}
 
 	figure.blog-img div {
-		height: 10rem;
+		height: 10em;
 	}
+
+	footer.main-foot section {
+		font-size: 1.1em;
+		width: 50%;
+	}
+	footer.main-foot section:last-child {
+		width: 100%;
+	}
+
 
 }
 
@@ -66,154 +78,29 @@
 		display: none;
 	}
 
-	nav li {
+	.main-head nav li {
 		width: 50%;
 
 	}
 
-	nav li a {
+	.main-head nav li a {
 		min-height: 100%;
-		padding-top: 0.5rem;
+		padding-top: 0.5em;
 	}
 
-	nav li:first-child a, nav li:first-child {
+	.main-head nav li:first-child {
 		width: 100%;
 		float:none;
-	}
-
-	figure.blog-img div {
-		height: 5rem;
 	}
 
 	.date {
 		float: none;
 	}
 
+	footer.main-foot section {
+		width: 100%;
+		float: none;
+	}
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

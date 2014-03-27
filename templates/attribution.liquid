@@ -1,0 +1,18 @@
+{% block content %}
+<header class="blog-head">
+	<h2>Attribution</h2>
+	<p>The following is a list of things I used to build this site, you should check them out because they're awesome.</p>
+</header>
+
+<ul class="attribution">
+	{% for link in global.attribution %}
+		
+		<li>
+			<h3><a href="{{ link.url }}">{{ link.title }}</a></h3>
+			<em>{{ link.use }}</em>
+			{% if link.licence %}<p>Licence: <a href="{{ link.licence-url }}">{{ link.licence }}</a></p>{% endif %}
+		</li>
+
+	{% endfor %}
+</ul>
+{% endblock %}

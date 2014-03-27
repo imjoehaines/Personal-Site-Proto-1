@@ -1,40 +1,22 @@
-/*
-
-BLUE
-#FF4136
-
-GREEN
-#FF4136
-
-YELLOW
-#FFDC00
-
-ORANGE
-#FF4136
-
-RED
-#FF4136
-
-SILVER
-#DDDDDD
-
-GRAY
-#AAAAAA
-
-BLACK
-#111111
-
-*/
+/* e52e2f */
 
 a, a:visited {
-	color: #FF4136;
+	color: #e52e2f;
 	text-decoration: none;
 	padding: 0 0.25em;
 }
 
 a:hover {
-	background: #FF4136;
-	color: #fff;
+	color: #8c1112;
+}
+
+a:active {
+	position: relative;
+	top: 1px; 
+}
+
+a .date:hover {
+	color: #333;
 }
 
 .wrapper {
@@ -47,22 +29,35 @@ a:hover {
 .content-wrapper {
 	max-width: 80%;
 	margin: 1em 0 0 25%;
-	padding: 0.5em 1em 1em 1em;
+	padding: 0.5em 1em 0 1em;
 	border-left: 1px solid #ddd;
+	overflow: hidden;
 }
 
-.content-wrapper footer {
+footer.main-foot {
 	margin-top: 1em;
 	padding-top: 1em;
 	border-top: 1px solid #ddd;
+	overflow: hidden;
+	font-size: 0.8em;
+	clear: both;
 }
 
-.content-wrapper footer p {
+footer.main-foot p {
 	margin-bottom: 0;
-	font-size: 1em;
+	font-size: 1.2em;
 	color: #666;
 }
+footer.main-foot p a {
+	margin-left: -0.25em;
+}
 
+footer.main-foot section {
+	width: 33%;
+	float: left;
+	display: inline-block;
+	padding: 1em;
+}
 
 header.main-head {
 	width: 22.5%;
@@ -74,6 +69,19 @@ header.main-head {
 
 header.main-head h1 {
 	font-size: 2em;
+	color: #333;
+}
+
+header.main-head a:hover {
+	background: #fef3f3;
+}
+
+footer.main-foot a:hover {
+	background: #fef3f3;
+}
+
+header.main-head a:hover h1 {
+	color: #b11617;
 }
 
 
@@ -91,14 +99,8 @@ nav ul {
 }
 
 nav li a {
-	padding: 0.5em 1em;
+	padding: 0.5em 1em 0.5em 0;
 	display: block;
-	border-right: 5px solid transparent;
-
-}
-
-nav li a.active {
-	border-right: 5px solid #FF4136;
 }
 
 ul.blog-preview {
@@ -127,18 +129,28 @@ section.blog-preview h2 {
 	font-size: 1em;
 	float: right;
 	color: #666;
+	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .pagination {
 	margin-top: 1em;
 	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.15em;
+	display: block;
+	text-align:center;
+}
+
+.pagination a:first-child {
+	float: left;
 	margin-left: -0.25em;
+}
+.pagination a:last-child {
+	float: right;
+	margin-right: -0.25em;
 }
 
 ul.tags {
 	list-style-type: none;
-	overflow: hidden;
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
@@ -146,15 +158,14 @@ ul.tags {
 }
 
 ul.tags li {
-	float: left;
+	display: inline;
 }
 
-h1.tag-header, span.date {
-	font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ul.tags li:first-child {
+	margin-left: -0.25em;
 }
 
 header.blog-head {
-	overflow: hidden;
 	padding-bottom: 1em;
 	margin-bottom: 0.5em;
 	border-bottom: 1px solid #ddd;
@@ -162,7 +173,7 @@ header.blog-head {
 }
 
 
-header.blog-head h1, header.blog-head h2, header.blog-head h3 {
+header.blog-head h1, header.blog-head h2, header.blog-head h3 , header.blog-head p:last-child {
 	margin-bottom: 0;
 }
 
@@ -235,7 +246,7 @@ span.blog-img-caption {
 }
 
 blockquote {
-	margin: 0 1.5em 1.5em 1.5em;
+	margin: 0 0 1.5em 0;
 	padding: 1em 1.5em;
 	border-left: 5px solid #ddd;
 	background: #f9f9f9;
@@ -243,27 +254,36 @@ blockquote {
 }
 
 blockquote::before {
-	content: open-quote;
+	content: "\201C";
 	font-size: 3.75em;
 	vertical-align: -0.3em;
 	line-height: 0;
 	color: #aaa;
 }
-blockquote > p:first-child {
+blockquote p:first-child {
 	display: inline;
 	padding-bottom: 0.5em;
 }
 blockquote > p:last-of-type::after {
-	content: close-quote;
+	content: "\201D";
 	font-size: 3em;
 	margin-left: 0.1em;
 	vertical-align: -0.3em;
 	line-height: 0;
 	color: #aaa;
 }
+blockquote footer {
+	float: right;
+	padding-top: 0.5em;
+	margin-top: 0.5em;
+	font-size: 0.9em;
+	color: #666;
+}
 
-pre[class*="language-"] {
-	margin-bottom: 1.5em;
+pre {
+	background: #272822;
+	color: #fff;
+	padding: 1.5em 0;
 }
 
 .cv-date {
@@ -275,7 +295,6 @@ pre[class*="language-"] {
 	margin-top: -0.5em;
 	margin-bottom: 1.5em;
 }
-
 
 a.disabled {
 	color: #aaa;
@@ -289,7 +308,32 @@ a.disabled:hover {
 	border: none;
 }
 
+ul.archive {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0;
+	overflow: hidden;
+	margin-left: -0.25em;
+}
+ul.archive li {
+	font-size: 1.25em;
+	overflow: hidden;
+}
 
+ul.attribution {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0;
+}
+ul.attribution li {
+	margin-bottom: 1em;
+}
+ul.attribution h3, ul.attribution p {
+	margin: 0;
+}
+ul.attribution a {
+	margin-left: -0.25em;
+}
 
 .left {
 	float: left;
@@ -299,636 +343,3 @@ a.disabled:hover {
 	float: right;
 	margin: 0.5em 0 0.5em 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

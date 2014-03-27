@@ -1,27 +1,26 @@
 <p class="pagination">
 	{% if blogpage %}
-		{% capture pageurl %}/blog-page-{% endcapture %}
+		{% capture pageurl %}/blog/page-{% endcapture %}
 	{% else %}
 		{% capture pageurl %}/blog/tag/{{ tagpage }}/page-{% endcapture %}
 	{% endif %}
 
 	{% if collection.previous %}
-		<a href="{{ pageurl }}{{ collection.current_page | minus:1 }}" class="page-link">Previous</a>
+		<a href="{{ pageurl }}{{ collection.current_page | minus:1 }}" class="page-link">Newer Posts</a>
 	{% else %}
-		<a class="page-link disabled">Previous</a>
+		<a class="page-link disabled">Newer Posts</a>
 	{% endif %}
 
-	Showing posts {{ collection.current_offset | plus: 1 }} -
-		{% if collection.next %}
-			{{ collection.current_offset | plus: collection.page_size }} 
-		{% else %}
-			{{ collection.size }}
-		{% endif %}
-	of {{ collection.size }}
+	<!--{% capture postcount %}{{ collection.current_offset | plus: 1 }}-{% if collection.next %}{{ collection.current_offset | plus: collection.page_size }}{% else %}{{ collection.size }}{% endif %}{% endcapture %}
+	
+	Showing posts {{ postcount }} of {{ collection.size }}-->
+
+	Page {{ collection.current_page }} of {{ collection.pages }}
 
 	{% if collection.next %}
-		<a href="{{ pageurl }}{{ collection.current_page | plus:1 }}" class="page-link">Next</a>
+		<a href="{{ pageurl }}{{ collection.current_page | plus:1 }}" class="page-link">Older Posts</a>
 	{% else %}
-		<a class="page-link disabled">Next</a>
+		<a class="page-link disabled">Older Posts</a>
 	{% endif %}
+
 </p>

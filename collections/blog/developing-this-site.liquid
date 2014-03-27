@@ -4,7 +4,7 @@ published: true
 layout: post
 tags: [design, programming, webdev, mixture]
 img: 21-3-14-working.jpg
-caption: A 100% accurate reflection of my desk
+caption: false
 imgattribution: false
 imgsrc: Galymzhan Abdugalimov via Unsplash
 imgsrcurl: http://unsplash.com/
@@ -20,5 +20,5 @@ imgsrcurl: http://unsplash.com/
 	It&rsquo;s hard not to sit here and praise Mixture forever, it allows for so much dynamism on a static site it&rsquo;s crazy. Take the image the top of this page for example; the caption won&rsquo;t display anything unless there&rsquo;s a caption in the metadata of this blog post <em>or</em> the image requires attribution. With a couple of <em>if</em> statements Mixture will auto-magically decide to show just a caption, a caption and the image source, just the image source or nothing at all. I can even grab that information and put it in the body of the blog post, like this: <a href="{{ model.imgsrcurl }}">{{ model.imgsrc }}</a> &mdash; wowzers! All of the tag lists, dates and blog post previews are done in the same way but, because it gets converted to static HTML, there&rsquo;s no logic running on a user&rsquo;s machine.
 </p>
 <p>
-	Other than Mixture, I&rsquo;m not using any other development tools &mdash; which I realise is like saying &ldquo;other than this three course meal, I&rsquo;ve not eaten anything today&rdquo;&hellip; Still, that does mean no pre-processors or boilerplates which I&rsquo;m not using because I&rsquo;m not a massive fan of either. I realise that they can save a <em>lot</em> of time but I&rsquo;ve never liked using  software that does more than you need it to. A lot of boilerplates have a lot of extra stuff that I just didn&rsquo;t need for this project. I&rsquo;m also only using JavaScript for  syntax highlighting code snippets (via <a href="http://prismjs.com/">Prism</a>) which is, again, in the name of simplicity &mdash; I&rsquo;m a firm believer in <abbr title="Keep It Simple Stupid">KISS</abbr>.
+	Other than Mixture, I&rsquo;m not using any other development tools &mdash; which I realise is like saying &ldquo;other than this three course meal, I&rsquo;ve not eaten anything today&rdquo;&hellip; Still, that does mean no pre-processors or boilerplates which I&rsquo;m not using because I&rsquo;m not a massive fan of either. I realise that they can save a <em>lot</em> of time but I&rsquo;ve never liked using  software that does more than you need it to. A lot of boilerplates have a lot of extra stuff that I just didn&rsquo;t need for this project. I also decided to . The only JavaScript I&rsquo;m using is <a href="https://code.google.com/p/ie7-js/">IE7-js</a> to take care of some compatibility issues (I use max-width a bunch) and <a href="http://prismjs.com/">Prism</a> for syntax highlighting code (like so: <code class="language-css">nav { background: pink; }</code>).
 </p>
